@@ -1,0 +1,67 @@
+.banner-img {
+  background-image: url('../images/book-open-pages-close-up-600nw-2562942291.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 240px;
+  width: 100%;
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 2px 16px #0002;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.carousel-caption-box {
+  max-width: 700px;
+  background: rgba(80,180,220,0.35);
+}
+
+.hr-main {
+  border: 0;
+  border-top: 2px solid #bfc9cc;
+  width: 90%;
+  max-width: 600px;
+  opacity: 0.75;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hr-white {
+  border: 0;
+  border-top: 2px solid #fff;
+  width: 90%;
+  max-width: 600px;
+  opacity: 0.75;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popular-books-bg {
+  background-color: #4e9ca0;
+  padding: 28px 0;
+}
+.popular-books-title {
+  font-size: 2.2rem;
+}
+
+.translate-bg {
+  background-color: #9ed6db;
+  padding: 32px 0 24px 0;
+}
+
+.joinus-icon-box {
+  background: #222;
+  color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  width: 70px;
+  height: 70px;
+}

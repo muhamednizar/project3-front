@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap project 3</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success py-2 shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/pngtree-books-logo-image_79143.jpg" class="rounded-circle shadow-sm" style="height:48px;">
+        <span class="fw-bold fs-4 ms-2 text-white">BOOKS</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6 me-2" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6 me-2" href="#">Genres</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white fw-medium fs-6 me-2" href="#" id="booksDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Books
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">The Alchemist</a></li>
+              <li><a class="dropdown-item" href="#">1984</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Harry Potter</a></li>
+              <li><a class="dropdown-item" href="#">To Kill a Mockingbird</a></li>
+              <li><a class="dropdown-item" href="#">Pride and Prejudice</a></li>
+              <li><a class="dropdown-item" href="#">More</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6 me-2" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex me-2" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search books" aria-label="Search">
+          <button class="btn btn-light text-success rounded-pill fw-medium px-4 me-2" type="submit">Search</button>
+        </form>
+        <button class="btn btn-light text-success rounded-pill fw-medium px-4 d-flex align-items-center gap-2" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+          <i class="fas fa-sign-in-alt"></i>
+          Login
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Login -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow-lg rounded-4 border-0">
+        <div class="modal-header bg-success text-white rounded-top-4">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-light">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label text-success fw-bold">Email address</label>
+              <input type="email" class="form-control rounded-3" id="loginEmail" placeholder="">
+              <div class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label text-success fw-bold">Password</label>
+              <input type="password" class="form-control rounded-3" id="loginPassword" placeholder="">
+            </div>
+            <div class="form-check form-switch mb-4">
+              <input class="form-check-input" type="checkbox" id="rememberMe">
+              <label class="form-check-label text-success" for="rememberMe">Remember me</label>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button type="submit" class="btn btn-success px-4 rounded-pill">Login</button>
+              <button type="button" class="btn btn-outline-secondary px-4 rounded-pill" data-bs-dismiss="modal">Close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Social Icons -->
+  <div class="position-fixed top-50 end-0 translate-middle-y me-3 d-flex flex-column align-items-center gap-3 z-3" style="width:60px;">
+    <a href="#" class="bg-white d-flex align-items-center justify-content-center shadow-lg border-0 rounded-3 text-decoration-none" style="width:48px; height:48px; font-size:1.7rem;"><i class="fab fa-facebook-f text-primary"></i></a>
+    <a href="#" class="bg-white d-flex align-items-center justify-content-center shadow-lg border-0 rounded-3 text-decoration-none" style="width:48px; height:48px; font-size:1.7rem;"><i class="fab fa-whatsapp text-success"></i></a>
+    <a href="#" class="bg-white d-flex align-items-center justify-content-center shadow-lg border-0 rounded-3 text-decoration-none" style="width:48px; height:48px; font-size:1.7rem;"><i class="fab fa-twitter text-info"></i></a>
+    <a href="#" class="bg-white d-flex align-items-center justify-content-center shadow-lg border-0 rounded-3 text-decoration-none" style="width:48px; height:48px; font-size:1.7rem;"><i class="fab fa-linkedin-in text-primary"></i></a>
+    <a href="#" class="bg-white d-flex align-items-center justify-content-center shadow-lg border-0 rounded-3 text-decoration-none" style="width:48px; height:48px; font-size:1.7rem;"><i class="fab fa-instagram text-danger"></i></a>
+  </div>
+
+  <!-- slider -->
+  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/book-The-Alchemist-book.webp" class="d-block w-100 rounded-bottom carousel-img">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" style="top:50%; transform:translateY(-50%);">
+          <div class="p-4 rounded-4 w-100 shadow-lg carousel-caption-box">
+            <h2 class="fw-bold text-white mb-2 text-uppercase carousel-title">The Alchemist</h2>
+            <div class="mb-3 text-white fs-5">Follow your dreams!</div>
+            <a href="#" class="btn btn-outline-light btn-lg px-4 rounded-pill">Explore Book</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/To-Kill-Mockingbird.jpg" class="d-block w-100 rounded-bottom" style="height:800px; object-fit:cover;">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" style="top:50%; transform:translateY(-50%);">
+          <div class="p-4 rounded-4 w-100 shadow-lg" style="max-width:700px; background:rgba(80,180,220,0.35);">
+            <h2 class="fw-bold text-white mb-2 text-uppercase" style="font-size:2.5rem;">To Kill a Mockingbird</h2>
+            <div class="mb-3 text-white fs-5">Stand up for what is right.</div>
+            <a href="#" class="btn btn-outline-light btn-lg px-4 rounded-pill">Explore Book</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/harry-potter-books.jpg" class="d-block w-100 rounded-bottom" style="height:800px; object-fit:cover;">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" style="top:50%; transform:translateY(-50%);">
+          <div class="p-4 rounded-4 w-100 shadow-lg" style="max-width:700px; background:rgba(80,180,220,0.35);">
+            <h2 class="fw-bold text-white mb-2 text-uppercase" style="font-size:2.5rem;">Harry Potter</h2>
+            <div class="mb-3 text-white fs-5">Magic is real for those who believe.</div>
+            <a href="#" class="btn btn-outline-light btn-lg px-4 rounded-pill">Explore Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Welcome Section -->
+  <section class="py-5 bg-success-subtle">
+    <div class="container">
+      <h4 class="fw-bold text-success mb-2 text-start text-uppercase fs-2">WELCOME TO THE GLOBAL BOOK LIBRARY</h4>
+      <p class="text-dark fs-5 fw-normal mb-3 text-start">
+        Discover a world of stories, knowledge, and imagination. Our library brings together the most influential books from every culture and era. Dive into classics, modern bestsellers, and hidden gems—all in one place.
+      </p>
+      <div class="text-start">
+        <a href="#" class="btn btn-success rounded-pill fw-medium px-4 btn-lg shadow">Learn more</a>
+      </div>
+    </div>
+  </section>
+  <hr class="hr-main">
+  
+  <!-- Popular Books Section -->
+  <section class="py-5 bg-primary bg-opacity-10">
+    <div class="container-fluid px-0">
+      <div class="w-100 popular-books-bg">
+        <h2 class="text-white text-center m-0 popular-books-title">Popular Books Worldwide</h2>
+        <hr class="hr-white">
+      </div>
+    </div>
+  </section>
+  <hr class="hr-main">
+  
+  <!-- Books -->
+  <div class="container mb-4">
+    <div class="accordion shadow-lg rounded-4" id="booksAccordion">
+      <div class="accordion-item bg-white shadow-sm rounded-3 mb-3 border-0">
+        <h2 class="accordion-header" id="headingAlchemist">
+          <button class="accordion-button city-title collapsed bg-white text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlchemist" aria-expanded="false" aria-controls="collapseAlchemist">The Alchemist</button>
+        </h2>
+        <div id="collapseAlchemist" class="accordion-collapse collapse" aria-labelledby="headingAlchemist" data-bs-parent="#booksAccordion">
+          <div class="accordion-body city-desc bg-light">A novel by Paulo Coelho about a shepherd's journey to realize his personal legend. "When you want something, all the universe conspires in helping you to achieve it."</div>
+        </div>
+      </div>
+      <div class="accordion-item bg-white shadow-sm rounded-3 mb-3 border-0">
+        <h2 class="accordion-header" id="heading1984">
+          <button class="accordion-button city-title collapsed bg-white text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1984" aria-expanded="false" aria-controls="collapse1984">1984</button>
+        </h2>
+        <div id="collapse1984" class="accordion-collapse collapse" aria-labelledby="heading1984" data-bs-parent="#booksAccordion">
+          <div class="accordion-body city-desc bg-light">George Orwell's dystopian masterpiece. "Big Brother is Watching You." A chilling vision of a totalitarian future.</div>
+        </div>
+      </div>
+      <div class="accordion-item bg-white shadow-sm rounded-3 mb-3 border-0">
+        <h2 class="accordion-header" id="headingHP">
+          <button class="accordion-button city-title collapsed bg-white text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHP" aria-expanded="false" aria-controls="collapseHP">Harry Potter</button>
+        </h2>
+        <div id="collapseHP" class="accordion-collapse collapse" aria-labelledby="headingHP" data-bs-parent="#booksAccordion">
+          <div class="accordion-body city-desc bg-light">J.K. Rowling's magical series about the boy who lived. "It does not do to dwell on dreams and forget to live."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="hr-main">
+  <!-- Translate Section -->
+  <section class="py-5">
+    <div class="container-fluid px-0">
+      <div class="w-100 translate-bg">
+        <h2 class="text-white text-center m-0" style="font-size:2.2rem;">Translate From Arabic To English</h2>
+      </div>
+      <div class="w-100" style="background-color: #9ed6db; padding: 32px 0 24px 0;">
+        <div class="container">
+          <div class="mb-3 fw-bold text-white" style="font-size:1.2rem;">Write and Translate <span class="fw-normal">Press Here</span></div>
+          <button class="btn btn-info btn-sm mb-3">Copy</button>
+          <textarea class="form-control mb-3" rows="5" placeholder="translate:"></textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="hr-main">
+  <!-- Translate Section-->
+  <section class="py-5">
+    <div class="container-fluid px-0">
+      <div class="w-100 translate-bg">
+        <h2 class="text-white text-center m-0" style="font-size:2.2rem;">Translate From Arabic To French</h2>
+      </div>
+      <div class="w-100" style="background-color: #9ed6db; padding: 32px 0 24px 0;">
+        <div class="container">
+          <div class="mb-3 fw-bold text-white" style="font-size:1.2rem;">Write and Translate <span class="fw-normal">Press Here</span></div>
+          <button class="btn btn-info btn-sm mb-3">Copy</button>
+          <textarea class="form-control mb-3" rows="5" placeholder="translate:"></textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="hr-main">
+  <!-- Translate Section-->
+  <section class="py-5">
+    <div class="container-fluid px-0">
+      <div class="w-100 translate-bg">
+        <h2 class="text-white text-center m-0" style="font-size:2.2rem;">Translate From Arabic To German</h2>
+      </div>
+      <div class="w-100" style="background-color: #9ed6db; padding: 32px 0 24px 0;">
+        <div class="container">
+          <div class="mb-3 fw-bold text-white" style="font-size:1.2rem;">Write and Translate <span class="fw-normal">Press Here</span></div>
+          <button class="btn btn-info btn-sm mb-3">Copy</button>
+          <textarea class="form-control mb-3" rows="5" placeholder="translate:"></textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="hr-main">
+  <section class="popular-banner-section">
+    <h2 class="popular-banner-title text-center text-uppercase">TOP BOOKS TO READ</h2>
+  </section>
+  <hr class="hr-main">
+  <!-- Books Cards Section -->
+  <section class="destinations-section py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card bg-light text-center border-0 shadow-sm rounded-4 h-100">
+            <img src="images/The-Alchemist-Book.jpg" class="card-img-top rounded-top-4 w-100" style="height:300px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">The Alchemist</h5>
+              <p class="card-text text-secondary">A journey of self-discovery by Paulo Coelho.</p>
+              <a href="#" class="btn btn-outline-info w-100 rounded-pill">Know More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-light text-center border-0 shadow-sm rounded-4 h-100">
+            <img src="images/Reproduction-cover-edition-The-Catcher-in-the.webp" class="card-img-top rounded-top-4 w-100" style="height:300px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">The Catcher in the Rye</h5>
+              <p class="card-text text-secondary">A story of teenage rebellion.</p>
+              <a href="#" class="btn btn-outline-info w-100 rounded-pill">Know More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-light text-center border-0 shadow-sm rounded-4 h-100">
+            <img src="images/harry-potter-books.jpg" class="card-img-top rounded-top-4 w-100" style="height:300px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">Harry Potter</h5>
+              <p class="card-text text-secondary">The magical world of J.K. Rowling.</p>
+              <a href="#" class="btn btn-outline-info w-100 rounded-pill">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card bg-light text-center border-0 shadow-sm rounded-4 h-100">
+            <img src="images/To-Kill-Mockingbird.jpg" class="card-img-top rounded-top-4 w-100" style="height:300px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">To Kill a Mockingbird</h5>
+              <p class="card-text text-secondary">A story of justice and race by Harper Lee.</p>
+              <a href="#" class="btn btn-outline-info w-100 rounded-pill">Know More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-light text-center border-0 shadow-sm rounded-4 h-100">
+            <img src="images/Prideandprejudiceposter.jpg" class="card-img-top rounded-top-4 w-100" style="height:300px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">Pride and Prejudice</h5>
+              <p class="card-text text-secondary">Jane Austen's timeless romance.</p>
+              <a href="#" class="btn btn-outline-info w-100 rounded-pill">Know More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-light text-center border-0 shadow-sm rounded-4 h-100">
+            <img src="images/TheCountofMonte-Cristo.jpg" class="card-img-top rounded-top-4 w-100" style="height:300px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">The Count of Monte Cristo</h5>
+              <p class="card-text text-secondary">A thrilling tale of betrayal, escape, and ultimate revenge.</p>
+              <a href="#" class="btn btn-outline-info w-100 rounded-pill">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="hr-main">
+  <!-- Banner -->
+  <div class="banner-img"></div>
+  <hr class="hr-main">
+  <!-- News Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="fw-bold fs-2 text-primary text-center mb-4 text-uppercase">BOOK NEWS</h2>
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <div class="card bg-success-subtle shadow-lg rounded-4 flex-row flex-wrap align-items-stretch overflow-hidden border-0">
+            <div class="col-md-5 p-0">
+              <img src="images/EM_1200x628_refresh_3.jpg" class="img-fluid h-100 w-100 news-card-img">
+            </div>
+            <div class="col-md-7 p-4 d-flex flex-column justify-content-center">
+              <h3 class="fw-bold text-success fs-2 mb-2">Podcast Title</h3>
+              <div class="d-flex align-items-center mb-1">
+                <i class="fa fa-calendar-alt me-2 text-secondary"></i>
+                <span class="text-success small">Mon, May 25th 2020</span>
+              </div>
+              <div class="bg-success rounded-pill mb-3 news-card-hr"></div>
+              <p class="text-dark mb-4 text-start">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-secondary px-3 py-2"><i class="fa fa-podcast me-1"></i>Podcast</span>
+                <span class="badge rounded-pill bg-secondary px-3 py-2"><i class="fa fa-clock me-1"></i>55 mins.</span>
+                <a href="#" class="btn btn-outline-info btn-sm rounded-pill d-inline-flex align-items-center"><i class="fa fa-play me-1"></i>Play Episode</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second News -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <div class="card bg-success-subtle shadow-lg rounded-4 flex-row-reverse flex-wrap align-items-stretch overflow-hidden border-0">
+            <div class="col-md-5 p-0">
+              <img src="images/pngtree-books-logo-image_79143.jpg" class="img-fluid h-100 w-100" style="object-fit:cover; height:220px;">
+            </div>
+            <div class="col-md-7 p-4 d-flex flex-column justify-content-center">
+              <h3 class="fw-bold text-success fs-2 mb-2">Podcast Title</h3>
+              <div class="d-flex align-items-center mb-1">
+                <i class="fa fa-calendar-alt me-2 text-secondary"></i>
+                <span class="text-success small">Tue, May 26th 2020</span>
+              </div>
+              <div class="bg-success rounded-pill mb-3 news-card-hr"></div>
+              <p class="text-dark mb-4 text-start">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-secondary px-3 py-2"><i class="fa fa-podcast me-1"></i>Podcast</span>
+                <span class="badge rounded-pill bg-secondary px-3 py-2"><i class="fa fa-clock me-1"></i>60 mins.</span>
+                <a href="#" class="btn btn-outline-info btn-sm rounded-pill d-inline-flex align-items-center"><i class="fa fa-play me-1"></i>Play Episode</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Third News -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <div class="card bg-success-subtle shadow-lg rounded-4 flex-row flex-wrap align-items-stretch overflow-hidden border-0">
+            <div class="col-md-5 p-0">
+              <img src="images/harry-potter-books.jpg " class="img-fluid h-100 w-100" style="object-fit:cover; height:220px;">
+            </div>
+            <div class="col-md-7 p-4 d-flex flex-column justify-content-center">
+              <h3 class="fw-bold text-success fs-2 mb-2">Podcast Title</h3>
+              <div class="d-flex align-items-center mb-1">
+                <i class="fa fa-calendar-alt me-2 text-secondary"></i>
+                <span class="text-success small">Wed, May 27th 2020</span>
+              </div>
+              <div class="bg-success rounded-pill mb-3 news-card-hr"></div>
+              <p class="text-dark mb-4 text-start">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-secondary px-3 py-2"><i class="fa fa-podcast me-1"></i>Podcast</span>
+                <span class="badge rounded-pill bg-secondary px-3 py-2"><i class="fa fa-clock me-1"></i>45 mins.</span>
+                <a href="#" class="btn btn-outline-info btn-sm rounded-pill d-inline-flex align-items-center"><i class="fa fa-play me-1"></i>Play Episode</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fourth News -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <div class="card bg-success-subtle shadow-lg rounded-4 flex-row-reverse flex-wrap align-items-stretch overflow-hidden border-0">
+            <div class="col-md-5 p-0">
+              <img src="images/book-open-pages-close-up-600nw-2562942291.webp" class="img-fluid h-100 w-100" style="object-fit:cover; height:220px;">
+            </div>
+            <div class="col-md-7 p-4 d-flex flex-column justify-content-center">
+              <h3 class="fw-bold text-success fs-2 mb-2">Podcast Title</h3>
+              <div class="d-flex align-items-center mb-1">
+                <i class="fa fa-calendar-alt me-2 text-secondary"></i>
+                <span class="text-success small">Thu, May 28th 2020</span>
+              </div>
+              <div class="bg-success rounded-pill mb-3 news-card-hr"></div>
+              <p class="text-dark mb-4 text-start">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-secondary px-3 py-2"><i class="fa fa-podcast me-1"></i>Podcast</span>
+                <span class="badge rounded-pill bg-secondary px-3 py-2"><i class="fa fa-clock me-1"></i>50 mins.</span>
+                <a href="#" class="btn btn-outline-info btn-sm rounded-pill d-inline-flex align-items-center"><i class="fa fa-play me-1"></i>Play Episode</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="hr-main">
+  <!-- Readers' Reviews Section (Bootstrap Only, Multiple Cards) -->
+  <section class="py-5 bg-gradient bg-light">
+    <div class="container">
+      <h2 class="fw-bold fs-2 text-success text-center mb-4 text-uppercase">READERS' REVIEWS</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
+          <div class="card shadow-lg rounded-4 border-0 position-relative overflow-hidden h-100 bg-light" style="min-height:420px;">
+            <img src="images/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg" class="w-100 h-100 position-absolute top-0 start-0" style="object-fit:cover; filter: grayscale(0.2) brightness(0.7);">
+            <div class="position-absolute top-0 start-0 w-100 px-4 pt-4 text-white">
+              <h4 class="fw-bold mb-2">All thanks and appreciation</h4>
+              <div class="mb-2"><i class="fa fa-calendar-alt me-1"></i> October 15, 2020</div>
+            </div>
+            <div class="position-absolute bottom-0 start-0 d-flex align-items-center mb-3 ms-3">
+              <img src="images/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg" class="rounded-circle border border-3 border-white shadow" style="width:70px; height:70px; object-fit:cover;">
+              <div class="ms-3">
+                <div class="fw-bold text-white">ahmed</div>
+                <div class="text-white-50 small">Book Lover</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-lg rounded-4 border-0 position-relative overflow-hidden h-100 bg-light" style="min-height:420px;">
+            <img src="images/360_F_531378938_xwRjN9e5ramdPj2coDwHrwk9QHckVa5Y.jpg" class="w-100 h-100 position-absolute top-0 start-0" style="object-fit:cover; filter: grayscale(0.2) brightness(0.7);">
+            <div class="position-absolute top-0 start-0 w-100 px-4 pt-4 text-white">
+              <h4 class="fw-bold mb-2">All thanks and appreciation</h4>
+              <div class="mb-2"><i class="fa fa-calendar-alt me-1"></i> October 15, 2020</div>
+            </div>
+            <div class="position-absolute bottom-0 start-0 d-flex align-items-center mb-3 ms-3">
+              <img src="images/360_F_531378938_xwRjN9e5ramdPj2coDwHrwk9QHckVa5Y.jpg" class="rounded-circle border border-3 border-white shadow" style="width:70px; height:70px; object-fit:cover;">
+              <div class="ms-3">
+                <div class="fw-bold text-white">Mohammed</div>
+                <div class="text-white-50 small">Avid Reader</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-lg rounded-4 border-0 position-relative overflow-hidden h-100 bg-light" style="min-height:420px;">
+            <img src="images/istockphoto-1388648617-612x612.jpg" class="w-100 h-100 position-absolute top-0 start-0" style="object-fit:cover; filter: grayscale(0.2) brightness(0.7);">
+            <div class="position-absolute top-0 start-0 w-100 px-4 pt-4 text-white">
+              <h4 class="fw-bold mb-2">All thanks and appreciation</h4>
+              <div class="mb-2"><i class="fa fa-calendar-alt me-1"></i> October 15, 2020</div>
+            </div>
+            <div class="position-absolute bottom-0 start-0 d-flex align-items-center mb-3 ms-3">
+              <img src="images/istockphoto-1388648617-612x612.jpg" class="rounded-circle border border-3 border-white shadow" style="width:70px; height:70px; object-fit:cover;">
+              <div class="ms-3">
+                <div class="fw-bold text-white">sameh</div>
+                <div class="text-white-50 small">Literature Enthusiast</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Join Us -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="fw-bold fs-2 text-primary text-center mb-4 text-uppercase">JOIN THE BOOK LOVERS COMMUNITY</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card bg-white shadow rounded-4 text-center py-4 h-100 border-0">
+            <div class="fw-bold text-info fs-5 mb-3">Subscribe Now</div>
+            <div class="bg-dark text-light rounded-4 shadow-lg d-flex align-items-center justify-content-center mx-auto mb-3 joinus-icon-box"><i class="fab fa-twitter display-3"></i></div>
+            <a href="#" class="fw-bold text-info">Go to link</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card bg-white shadow rounded-4 text-center py-4 h-100 border-0">
+            <div class="fw-bold text-info fs-5 mb-3">Follow</div>
+            <div class="bg-dark text-light rounded-4 shadow-lg d-flex align-items-center justify-content-center mx-auto mb-3 joinus-icon-box"><i class="fab fa-whatsapp display-3"></i></div>
+            <a href="#" class="fw-bold text-info">Go to link</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card bg-white shadow rounded-4 text-center py-4 h-100 border-0">
+            <div class="fw-bold text-info fs-5 mb-3">Like the page</div>
+            <div class="bg-dark text-light rounded-4 shadow-lg d-flex align-items-center justify-content-center mx-auto mb-3 joinus-icon-box"><i class="fab fa-linkedin-in display-3"></i></div>
+            <a href="#" class="fw-bold text-info">Go to link</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card bg-white shadow rounded-4 text-center py-4 h-100 border-0">
+            <div class="fw-bold text-info fs-5 mb-3">Watch videos</div>
+            <div class="bg-dark text-light rounded-4 shadow-lg d-flex align-items-center justify-content-center mx-auto mb-3 joinus-icon-box"><i class="fab fa-instagram display-3"></i></div>
+            <a href="#" class="fw-bold text-info">Go to link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="hr-main">
+  <!-- Footer Section -->
+  <footer class="bg-success text-light py-4 mt-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img src="images/pngtree-books-logo-image_79143.jpg" class="mb-2 rounded-circle shadow" style="width:56px; height:56px;">
+          <div class="fw-bold fs-5 mb-2">Book Lovers</div>
+          <div class="mb-2">
+            <div>Tel : 000-000-000</div>
+            <div>Address : Global Library</div>
+            <div>Fax : 000-000-000</div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="fw-bold fs-5 mb-2">Useful links</div>
+          <div class="mb-2">
+            <div><a href="#" class="text-white text-decoration-none">Explore Books</a></div>
+            <div><a href="#" class="text-white text-decoration-none">Genres</a></div>
+            <div><a href="#" class="text-white text-decoration-none">Contact Us</a></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="fw-bold fs-5 mb-2">Our Vision</div>
+          <div class="mb-2">
+            <div>Books for everyone</div>
+            <div>Inspire lifelong reading</div>
+            <div>Connecting readers worldwide</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-white mt-3">COPYRIGHT © 2023 GLOBAL BOOK LIBRARY. ALL RIGHTS RESERVED.</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
